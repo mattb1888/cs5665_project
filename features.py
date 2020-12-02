@@ -13,6 +13,7 @@ def csv_to_array_train(file_name):
     id = int(file_name.split('/')[-1][:-4])
     out = np.array(targets[id])
     des = data.describe(percentiles=[.1, .2, .3, .4, .5, .6, .7, .8, .9])
+    print(des[1:])
     out = np.append(out, des[1:])
     return out
 
